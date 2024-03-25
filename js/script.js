@@ -9,9 +9,9 @@
  */
 function findIncomeClicked() {
   // input
-  const baseOfTriangle = parseInt(document.getElementById('base-of-triangle').value)
-  const heightOfTriangle = parseInt(document.getElementById('hourly-income').value)
-  const govTax = (baseOfTriangle * heightOfTriangle) * 0.5
-  const totalEarnings = (baseOfTriangle * heightOfTriangle) * 0.5
-  document.getElementById("area").innerHTML = 'Area is: ' + areaOfTriangle + ' cm²'
+  const hoursEntered = parseInt(document.getElementById('hours-entered').value)
+  const hourlyIncome = parseInt(document.getElementById('hourly-income').value)
+  const govTax = (hoursEntered* hourlyIncome) * 0.18
+  const totalEarnings = (hoursEntered * hourlyIncome) - govTax
+  document.getElementById("answer").innerHTML = 'Your total earnings is: $' + totalEarnings.toFixed(2) + '<br>' + "The government will take: $" + govTax.toFixed(2)
 }
